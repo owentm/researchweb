@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LinkedSpace</title>
      <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="chat.css">
 </head>
 <body>
 <header>
@@ -23,3 +24,47 @@
         </ul>
     </div>
 </nav>
+
+
+  <div class="chat-container">
+    <div class="chat-header">Simple Chat</div>
+    <div class="chat-messages" id="chatMessages">
+    </div>
+
+  </div>
+<footer>
+    <div class="input-container">
+      <input type="text" id="userInput" placeholder="Type your message...">
+      <button id="sendMessageBtn" onclick="sendMessage()">Send</button>
+    </div>
+</footer>
+  <script>
+    function sendMessage() {
+      const userInput = document.getElementById('userInput');
+      const chatMessages = document.getElementById('chatMessages');
+
+      if (userInput.value.trim() !== '') {
+        const userMessage = document.createElement('div');
+        userMessage.classList.add('message', 'user-message');
+        userMessage.textContent = userInput.value;
+        chatMessages.appendChild(userMessage);
+
+        const breakLine =  document.createElement('br');
+        chatMessages.appendChild(breakLine);
+
+        const botMessage = document.createElement('div');
+        botMessage.classList.add('message', 'bot-message');
+        botMessage.textContent = 'Bot: Thanks for your message!';
+        chatMessages.appendChild(botMessage);
+
+        chatMessages.appendChild(breakLine);
+
+        userInput.value = '';
+
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }
+    }
+  </script>
+
+</body>
+
