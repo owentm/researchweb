@@ -7,6 +7,20 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <script>
+        // Initialize the timer
+        let seconds = 0;
+        const timerElement = document.getElementById('timer');
+
+        // Function to update the timer display
+        function updateTimer() {
+            timerElement.textContent = `Time spent on this page: ${seconds} seconds`;
+            seconds++;
+        }
+
+        // Update the timer every second
+        setInterval(updateTimer, 1000);
+    </script>
 <header>
 
     <h1>LinkedSpace</h1>
