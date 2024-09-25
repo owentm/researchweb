@@ -30,14 +30,21 @@
         <div class="middle-section", style="margin-left:30%">
             <center>
             <p>Welcome to LinkedSpace, your resource for all things jobs and socials!</p><br>
+            <form action="/feed.html" id="frm">
+            
+              <label for="avatar">Avatar:</label><br>
+                <img id="avatar" src="" alt="Avatar" width="150"><br><br>
+
+                <!-- Button to change avatar -->
+                <button type="button" onclick="changeAvatar()">Change Avatar</button><br><br>
+
+            <input type="hidden" id="id">
             <label for="user"> Username: </label><br>
             <input type="text" id="user" name="username"><br>
             <label for="pass"> Password: </label><br>
-            <input type="text" id="pass" name="password"><br><br><br>
-
-            <form action="feed.html">
-            <input type="submit" id="submit" name="submit" value="Sign in" />
-            </form>
+            <input type="password" id="pass" name="password"><br><br><br>
+            <input type="submit" id="submit" name="submit" value="Sign Up" />
+          </form>
 
             </center>
 
@@ -49,4 +56,8 @@
         </div>
 </div>
 </body>
+
+<script type="module" src="database.js"></script>
+<script src="style.js"></script>
+
 </html>
