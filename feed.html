@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LinkedSpace</title>
-     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js"></script>
 </head>
 <body>
 <header>
@@ -16,12 +17,11 @@
 <nav>
     <div class="nav-container">
         <ul>
-
-            <li><form action="feed.html"> <input type="submit" id="feed" name="feed" value="Home" /></form></li>
-            <li><form action="profile.html"> <input type="submit" id="profile" name="profile" value="Profile" /></form></li>
-            <li><form action ="Jobs.html"> <input type="submit" id="jobs" name="jobs" value="Jobs" /></form></li>
-            <li><form action="Friends.html"> <input type="submit" id="friends" name="friends" value="Friends" /></form></li>
-            <li><form action="messages.html"> <input type="submit" id="messages" name="messages" value="Messages" /></form></li>
+            <li><a href="feed.html" id="feed">Home</a></li>
+            <li><a href="profile.html" id="profile">Profile</a></li>
+            <li><a href="jobs.html" id="jobs">Jobs</a></li>
+            <li><a href="friends.html" id="friends">Friends</a></li>
+            <li><a href="messages.html" id="messages">Messages</a></li>
         </ul>
     </div>
 </nav>
@@ -31,9 +31,9 @@
         <div class="left-section">
             <h3>Friends</h3>
             <ul>
-                <li>John Dough</li>
-                <li>Jane Smith</li>
-                <li>Michael Johnson</li>
+                <li> <a href="johnprofile.html" id="John"> John Dough</a></li>
+                <li><a href="janeprofile.html" id="Jane"> Jane Smith</a></li>
+                <li><a href="mikeprofile.html" id="Mike"> Michael Johnson</a></li>
                 <!-- Add more names here -->
             </ul>
         </div>
@@ -63,7 +63,7 @@
         </div>
         <div class="right-section">
             <h3>Announcements</h3>
-            <p>Important announcements go here.</p>
+            <p> Important  1.0 Update coming soon to LinkedSpace!!!</p>
         </div>
     </div>
 </div>

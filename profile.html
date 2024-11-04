@@ -1,26 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LinkedSpace</title>
-  <link rel="stylesheet" href="styles.css">
+    <title>User Profile - LinkedSpace</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js"></script>
 </head>
+
 <body>
-<header>
+    <header>
+        <h1>LinkedSpace</h1>
+    </header>
+    <nav>
+        <div class="nav-container">
+            <ul>
+                <li><a href="feed.html" id="feed">Home</a></li>
+                <li><a href="profile.html" id="profile">Profile</a></li>
+                <li><a href="jobs.html" id="jobs">Jobs</a></li>
+                <li><a href="friends.html" id="friends">Friends</a></li>
+                <li><a href="messages.html" id="messages">Messages</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <h1>LinkedSpace</h1>
+    <div class="content">
+        <div class="container">
+            <div class="left-section">
+                <h3>Profile Picture</h3>
+                <img src="https://cdn1.iconfinder.com/data/icons/people-49/512/_nerd_man-512.png" alt="User Avatar" class="profile-img">
+                <form action="#" method="post" enctype="multipart/form-data">
+                    <input type="file" name="profile-picture" accept="image/*">
+                    <button type="submit">Upload</button>
+                </form>
+            </div>
 
-</header>
-<nav>
-    <div class="nav-container">
-        <ul>
+            <div class="middle-section">
+                <h3>Edit Profile</h3>
+                <form action="#" method="post">
+                    <label for="username">Name:</label>
+                    <input type="text" id="username" name="username" placeholder="Your Name" value="John Dough">
 
-            <li><form action="feed.html"> <input type="submit" id="feed" name="feed" value="Home" /></form></li>
-            <li><form action="profile.html"> <input type="submit" id="profile" name="profile" value="Profile" /></form></li>
-            <li><form action ="Jobs.html"> <input type="submit" id="jobs" name="jobs" value="Jobs" /></form></li>
-            <li><form action="Friends.html"> <input type="submit" id="friends" name="friends" value="Friends" /></form></li>
-            <li><form action="messages.html"> <input type="submit" id="messages" name="messages" value="Messages" /></form></li>
-        </ul>
+                    <label for="bio">Bio:</label>
+                    <textarea id="bio" name="bio" rows="4" placeholder="Tell something about yourself...">Had an amazing time last night – music, food, and good vibes all around!</textarea>
+
+                    <button type="submit">Save Changes</button>
+                </form>
+            </div>
+        </div>
     </div>
-</nav>
+
+</body>
+
+</html>

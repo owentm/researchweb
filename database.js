@@ -1,47 +1,61 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
-import { getDatabase, ref, push, onValue, remove, set } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-database.js";
-    
-const  appSettings = {
-    databaseURL: 'https://linkdspace-87fd9-default-rtdb.firebaseio.com/',
 
-}
 
-const app = initializeApp(appSettings);
-const database = getDatabase(app);
+  // Import the functions you need from the SDKs you need
 
-const usersListInDB = ref(database, "users") //databse name
+  import { initializeApp } from "firebase/app";
 
-const id = document.querySelector("#id");
-const user = document.querySelector("#user");
-const pass = document.querySelector("#pass");
-const submitButton = document.querySelector("#submit");
-const form = document.querySelector("#frm");
-const tableBody = document.querySelector("tbody");
-const avatar = document.getElementById("avatar");
 
-form.addEventListener("submit", function (event){
-    event.preventDefault();//look this up
+ // import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-analytics.js";
 
-    if (id.value){
-        return;
-    }
+  // TODO: Add SDKs for Firebase products that you want to use
 
-    if (!user.value.trim() || !pass.value.trim() ){
-            alert("please complete all of those fields before logging in.")
-            return;
-    }
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
-    const newUser = {
-        user: user.value.trim(),
-        pass: pass.value.trim(),
-        avatar: avatar.src
-    }
 
-    push(usersListInDB,newUser);
+  // Your web app's Firebase configuration
 
-    window.location.href="feed.html"
-})
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+  const firebaseConfig = {
+
+    apiKey: "AIzaSyDqc7aZUnBM6BM6ri0m2oj7FkNKnDESirM",
+
+    authDomain: "linkedspace-76d77.firebaseapp.com",
+
+    projectId: "linkedspace-76d77",
+
+    storageBucket: "linkedspace-76d77.appspot.com",
+
+    messagingSenderId: "897208957659",
+
+    appId: "1:897208957659:web:e129682558190395686afe",
+
+    measurementId: "G-NN1CQYQGG0"
 
 
 
+  };
+
+//import { getDatabase, ref, child, get } from "firebase/database";
+//
+//const dbRef = ref(getDatabase());
+//get(child(dbRef, `users/${userId}`)).then((snapshot) => {
+//  if (snapshot.exists()) {
+//    console.log(snapshot.val());
+//  } else {
+//    console.log("No data available");
+//  }
+//}).catch((error) => {
+//  console.error(error);
+//});
+
+
+
+
+
+  // Initialize Firebase
+
+  const app = initializeApp(firebaseConfig);
+
+  //const analytics = getAnalytics(app);
 
